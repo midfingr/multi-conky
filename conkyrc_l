@@ -1,0 +1,67 @@
+######################
+# - Conky settings - #
+######################
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+if_up_strictness link
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Liberation Sans:size=8
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window_class Conky
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+alignment top_left
+gap_x 25
+gap_y 40
+minimum_size 182 800
+maximum_width 182
+
+default_bar_size 60 8
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+
+default_color cccccc
+
+color0 white
+color1 CE5C00 
+color2 white
+color3 CE5C00
+color4 yellow
+color5 blue
+
+TEXT
+${color1}${font Liberation Sans:size=10}BASH COMMANDS $stippled_hr${font}
+${voffset 8}${color4}${font Verdana Sans: size=10}CTRL+l = Clear Screen
+${voffset 4}${color0}CTRL+u = Delete Command
+${voffset 4}${color4}CTRL+c = End Program
+${voffset 4}${color0}CTRL+p = Last Command
+${voffset 8}${color5}${font Liberation Sans:size=10}TERMINAL COMMANDS $stippled_hr${font}
+${voffset 8}${color4}${font Verdana Sans: size=10}ls = List Directory
+${voffset 4}${color0}${font Verdana Sans: size=10}ls -la = List All
+${voffset 4}${color4}${font Verdana Sans: size=10}df -h = Disk Space
+${voffset 4}${color0}${font Verdana Sans: size=10}free -m = Memory
